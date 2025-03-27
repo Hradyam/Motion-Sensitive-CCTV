@@ -30,49 +30,33 @@ A security system that triggers video recording when motion is detected using an
 
 ## 🔌 Hardware Setup
 1. Connect proximity sensor to Arduino:
-   -VCC → 5V
-   -GND → GND
-   -TRIG → Digital Pin 9
-   -ECHO → Digital Pin 10
-2. Connect Arduino to computer via USB
-3. Upload the trigger code from "trigger code" folder to the arduino after making relevant changes depending on your system
+   
+   - VCC → 5V
+   - GND → GND
+   - TRIG → Digital Pin 9
+   - ECHO → Digital Pin 10
+3. Connect Arduino to computer via USB
+4. Upload the trigger code from "trigger code" folder to the arduino after making relevant changes depending on your system
 
 ## 🚀 Usage
 1. Create outputs directory:
 2. Run Python script:
 3. System will:
-  - Monitor serial port for triggers
-  - Start 10-second recording on detection
-  - Save videos as `outputs/video_1.mp4`, `video_2.mp4`, etc.
-  - Show live preview during recording
+   - Monitor serial port for triggers
+   - Start 10-second recording on detection
+   - Save videos as `outputs/video_1.mp4`, `video_2.mp4`, etc.
+   - Show live preview during recording
 
 ## 🛠 Troubleshooting
 1. **Serial Port Issues**:
-  - Check port name in `serial.Serial()` call
-  - Ensure no other program is using the port
+   - Check port name in `serial.Serial()` call
+   - Ensure no other program is using the port
 2. **Video Saving Problems**:
-  - Verify `outputs/` directory exists
-  - Check write permissions
+   - Verify `outputs/` directory exists
+   - Check write permissions
 3. **Sensor False Positives**:
-  - Adjust `safetyDistance` in Arduino code
-  - Modify debounce delay
-
-## 📂 Project Structure
-
-motion-security-system/
-├── arduino_code/
-│   └── proximity_sensor.ino
-├── outputs/
-├── python_code/
-│   └── security_system.py
-├── docs/
-│   └── images/
-│       └── wiring_diagram.png
-├── tests/
-│   └── test_security_system.py
-├── requirements.txt
-├── README.md
-└── LICENSE
+   - Adjust `safetyDistance` in Arduino code
+   - Modify debounce delay
 
 
 ## 🤝 Contributing
