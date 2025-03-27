@@ -59,12 +59,21 @@ A security system that triggers video recording when motion is detected using an
 
 ## 📂 Project Structure
 
-├── security_system.py # Main Python script
-├── arduino_code/ # Arduino sketch
-│ └── proximity_sensor.ino
-├── outputs/ # Recorded videos
-├── requirements.txt # Python dependencies
-└── README.md
+motion-security-system/
+├── arduino_code/
+│   └── proximity_sensor.ino
+├── outputs/
+├── python_code/
+│   └── security_system.py
+├── docs/
+│   └── images/
+│       └── wiring_diagram.png
+├── tests/
+│   └── test_security_system.py
+├── requirements.txt
+├── README.md
+└── LICENSE
+
 
 ## 🤝 Contributing
 Contributions welcome! Please:
