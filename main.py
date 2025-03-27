@@ -6,7 +6,7 @@ import time
 arduino = serial.Serial('/dev/ttyUSB0', 9600, timeout=5)  # Use the usb port you connected your ardiuno to 
 time.sleep(2)  # Give the connection time to establish
 
-def record_video(duration=120, output_file='outputs/output.mp4'):
+def record_video(duration=10, output_file=r'outputs/output.mp4'):
     # Notify Arduino that recording has started
     arduino.write(b'BUSY\n')
     
@@ -42,7 +42,7 @@ def record_video(duration=120, output_file='outputs/output.mp4'):
     cv2.destroyAllWindows()
 
     # Notify Arduino that recording has finished
-    arduino.write(b'DONE\n')
+    #arduino.write(b'DONE\n')
 
 # Main loop to listen for the trigger
 video_count = 1
@@ -51,6 +51,6 @@ while True:
     
     if data == "TRIGGER":
         print(f"Proximity Triggered! Starting recording video_{video_count}.mp4")
-        record_video(output_file=f'video_{video_count}.mp4')  # Record for 2 minutes
+        record_video(output_file=f'outputs/video_{video_count}.mp4')  # Record for 2 minutes
         print("Recording complete.")
         video_count += 1
