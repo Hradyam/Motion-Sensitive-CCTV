@@ -2,7 +2,7 @@
 
 A security system that triggers video recording when motion is detected using an Arduino proximity sensor and Python-based video capture.
 
-## 🌟 Features
+## Features
 - Real-time motion detection with proximity sensor
 - Automatic video recording on trigger
 - Serial communication between Arduino & Python
@@ -10,25 +10,25 @@ A security system that triggers video recording when motion is detected using an
 - Adjustable recording duration
 - Multiple video file management
 
-## 🛠 Hardware Requirements
+## Hardware Requirements
 - Arduino Uno/Nano
 - HC-SR04 Ultrasonic Sensor (or similar proximity sensor)
 - USB cable for Arduino
 - Webcam (built-in or external)
 - Jumper wires
 
-## 💻 Software Requirements
+## Software Requirements
 - Arduino IDE
 - Python 3.8+
 - OpenCV (`pip install opencv-python`)
 - PySerial (`pip install pyserial`)
 
-## 📦 Installation
+## Installation
 1. Clone Repository
 2. Install Python dependencies:
    - use "pip install -requirements.txt"
 
-## 🔌 Hardware Setup
+## Hardware Setup
 1. Connect proximity sensor to Arduino:
    
    - VCC → 5V
@@ -38,7 +38,7 @@ A security system that triggers video recording when motion is detected using an
 3. Connect Arduino to computer via USB
 4. Upload the trigger code from "trigger code" folder to the arduino after making relevant changes depending on your system
 
-## 🚀 Usage
+## Usage
 1. Create outputs directory:
 2. Run Python script:
 3. System will:
@@ -47,7 +47,7 @@ A security system that triggers video recording when motion is detected using an
    - Save videos as `outputs/video_1.mp4`, `video_2.mp4`, etc.
    - Show live preview during recording
 
-## 🛠 Troubleshooting
+## Troubleshooting
 1. **Serial Port Issues**:
    - Check port name in `serial.Serial()` call
    - Ensure no other program is using the port
@@ -59,7 +59,7 @@ A security system that triggers video recording when motion is detected using an
    - Modify debounce delay
 
 
-## 🤝 Contributing
+## Contributing
 Contributions welcome! Please:
 1. Fork the repository
 2. Create your feature branch
